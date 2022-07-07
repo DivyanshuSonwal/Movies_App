@@ -39,7 +39,6 @@
 
 .banner-card {
   height: 70vh;
-  width: 100vw;
   margin-top:1.5vh;
   margin-bottom: 3vh;
   position: relative;
@@ -47,7 +46,6 @@
 
 .banner-img {
   height: 70vh;
-  width: 100vw;
 }
 
 .banner-title {
@@ -79,6 +77,8 @@
   margin: 1rem;
   position: relative;
   color:white;
+  border: solid;
+  border-color: white;
 }
 
 .movies-title {
@@ -104,7 +104,7 @@
 
 .movies-img {
   height: 40vh;
-  width: 20vw;
+  /* width: 20vw; */
 }
 
 @media screen and (max-width: 425px) {

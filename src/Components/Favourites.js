@@ -164,15 +164,15 @@ export default class Favourites extends Component {
     // if(this.state.currGenre==="All Genres") filteredMovies = this.state.movies;
   
     // Handling Of Pagination Of Favourites Page--->
+    console.log("filteredMovieLength " + filteredMovies.length);
     let pages = Math.ceil(filteredMovies.length/this.state.limit);
     let pagesArr = [];
     for(let i=1; i<=pages; i++){
        pagesArr.push(i);
     }
-    console.log(pagesArr);
 
     let si = (this.state.currPage-1)*this.state.limit;
-    let ei = si + this.state.limit;
+    let ei = si + parseInt(this.state.limit);
 
     filteredMovies = filteredMovies.slice(si,ei);
 
