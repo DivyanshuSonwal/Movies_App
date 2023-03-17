@@ -42,13 +42,13 @@ export default class Movies extends Component {
 
   handleRight = () => {
     let temparr = [];
-    if (this.state.currPage == this.state.pages.length) {
+    if (this.state.currPage === this.state.pages.length) {
       for (let i = 1; i <= this.state.pages.length + 1; i++) {
         temparr.push(i);
       }
     }
 
-    if (temparr.length != 0) {
+    if (temparr.length !== 0) {
       this.setState({
         pages: [...temparr],
       });
@@ -63,7 +63,7 @@ export default class Movies extends Component {
   };
 
   handleLeft = () => {
-    if (this.state.currPage != 1) {
+    if (this.state.currPage !== 1) {
       this.setState(
         {
           currPage: this.state.currPage - 1,
@@ -75,7 +75,7 @@ export default class Movies extends Component {
   };
 
   handlePageNumber = (currPageNumber) => {
-    if (this.state.currPage != currPageNumber) {
+    if (this.state.currPage !== currPageNumber) {
       this.setState(
         {
           currPage: currPageNumber,
@@ -145,7 +145,7 @@ export default class Movies extends Component {
                         justifyContent: "center",
                       }}
                     >
-                      {this.state.hover == movieObj.id && (
+                      {this.state.hover === movieObj.id && (
                         <a
                           className="btn btn-primary movies-btn"
                           onClick={() => this.handleFavourites(movieObj)}
@@ -207,7 +207,7 @@ export default class Movies extends Component {
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
                   <li className="page-item">
-                    {this.state.pages.length != 1 ? (
+                    {this.state.pages.length !== 1 ? (
                       <a className="page-link" onClick={this.handleLeft}>
                         Previous
                       </a>
